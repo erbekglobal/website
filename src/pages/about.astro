@@ -1,0 +1,13 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import ContactCallout from '../components/ContactCallout.astro';
+import company from '../data/company.json';
+---
+<SiteLayout title="Hakkımızda">
+  <section class="page-hero container"><p class="eyebrow">Erbek Global</p><h1>Hakkımızda</h1><p>{company.about}</p></section>
+  <section class="section container about-services">
+    <div><p class="eyebrow">{company.sector}</p><h2>{company.slogan}</h2></div>
+    <ul class="plain-list">{company.services.map((service) => <li>{service}</li>)}</ul>
+  </section>
+  <ContactCallout />
+</SiteLayout>

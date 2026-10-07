@@ -1,0 +1,64 @@
+backend:
+  name: github
+  repo: SodaSyrup/erbek-global
+  branch: main
+  base_url: https://YOUR-OAUTH-SERVER
+  auth_endpoint: auth
+  # Production login requires a GitHub OAuth service.
+local_backend: true
+locale: tr
+media_folder: public/uploads
+public_folder: /uploads
+collections:
+  - name: company
+    label: Şirket bilgileri
+    files:
+      - name: profile
+        label: Şirket profili
+        file: src/data/company.json
+        format: json
+        fields:
+          - { label: Şirket adı, name: name, widget: string }
+          - { label: Alan, name: sector, widget: string }
+          - { label: Slogan, name: slogan, widget: string }
+          - { label: Giriş metni, name: intro, widget: string }
+          - { label: İletişim çağrısı, name: contactPrompt, widget: string }
+          - { label: Görünen telefon, name: phoneDisplay, widget: string }
+          - { label: Telefon bağlantısı, name: phone, widget: string }
+          - { label: WhatsApp bağlantısı, name: whatsapp, widget: string }
+          - { label: Web sitesi, name: website, widget: string }
+          - { label: E-posta, name: email, widget: string, required: false }
+          - { label: Adres, name: address, widget: text, required: false }
+          - { label: Hizmet bölgesi, name: workArea, widget: string, required: false }
+          - label: Hizmetler
+            name: services
+            widget: list
+            field: { label: Hizmet, name: item, widget: string }
+          - { label: Hakkımızda metni, name: about, widget: text }
+  - name: projects
+    label: Projeler
+    folder: src/content/projects
+    create: true
+    slug: '{{slug}}'
+    extension: md
+    format: frontmatter
+    summary: '{{title}} · {{location}} · {{year}}'
+    fields:
+      - { label: Başlık, name: title, widget: string }
+      - { label: Kısa açıklama, name: summary, widget: text }
+      - { label: Konum, name: location, widget: string, required: false }
+      - { label: Yıl, name: year, widget: number, required: false, value_type: int }
+      - { label: Taslak, name: draft, widget: boolean, default: false }
+      - label: Galeri
+        name: gallery
+        widget: list
+        required: false
+        fields:
+          - { label: Görsel, name: image, widget: image }
+          - { label: Alternatif metin, name: alt, widget: string }
+      - label: İçerik
+        name: body
+        widget: markdown
+        required: false
+        editor_components: []
+        buttons: [bold, italic, code, link, heading-two, heading-three, quote, bulleted-list, numbered-list]
