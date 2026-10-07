@@ -1,6 +1,6 @@
 # Erbek Global
 
-A Turkish company website built with Astro. The site uses the GitHub Pages address `https://sodasyrup.github.io/erbek-global/` and the `/erbek-global/` base path.
+A Turkish company website built with Astro. The site uses the GitHub Pages address `https://erbekglobal.github.io/website/` and the `/website/` base path.
 
 ## Run locally
 
@@ -15,7 +15,7 @@ To edit content with Decap CMS locally, start a second terminal and run:
 BIND_HOST=127.0.0.1 npx decap-server
 ```
 
-Then open `http://localhost:4321/erbek-global/admin/`. The local CMS server writes to this repository. Stop it when finished.
+Then open `http://localhost:4321/website/admin/`. The local CMS server writes to this repository. Stop it when finished.
 
 ## Edit content
 
@@ -31,4 +31,4 @@ Decap CMS local editing works with the local server command above. Production CM
 
 ## Optional custom domain
 
-When `erbekglobal.com` is connected to GitHub Pages, configure the domain in repository Pages settings, add the required DNS records, and add `public/CNAME` with `erbekglobal.com`. Then change `site` in `astro.config.mjs` to `https://erbekglobal.com`, remove the `base: '/erbek-global'` setting, and update Decap's `public_folder` in `public/admin/config.yml` to `/uploads`.
+When `erbekglobal.com` is connected to GitHub Pages, configure the domain in repository Pages settings, add the required DNS records, and add `public/CNAME` with `erbekglobal.com`. Then change `site` in `astro.config.mjs` to `https://erbekglobal.com`, remove the `base: '/website'` setting, and update Decap's `public_folder` in `public/admin/config.yml` to `/uploads`.

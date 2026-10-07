@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: SodaSyrup/erbek-global
+  repo: erbekglobal/website
   branch: main
   base_url: https://YOUR-OAUTH-SERVER
   auth_endpoint: auth

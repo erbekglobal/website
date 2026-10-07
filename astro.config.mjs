@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://sodasyrup.github.io',
-  base: '/erbek-global',
+  site: 'https://erbekglobal.github.io',
+  base: '/website',
   trailingSlash: 'always',
 });
