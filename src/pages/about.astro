@@ -2,41 +2,21 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 import ContactCallout from '../components/ContactCallout.astro';
 import company from '../data/company.json';
+import pages from '../data/pages.json';
+const copy = pages.about;
+const sections = copy.sections ?? [];
 ---
-<SiteLayout title="Hakkımızda">
-  <section class="page-hero container"><p class="eyebrow">{company.name}</p><h1>Hakkımızda</h1></section>
+<SiteLayout title={copy.seoTitle}>
+  <section class="page-hero container"><p class="eyebrow">{company.name}</p><h1>{copy.pageHeading}</h1></section>
   <article class="section container about-content">
-    <section>
-      <h2>Geleceği Güvenle İnşa Ediyoruz</h2>
-      <p>{company.name} İNŞAAT TAAHHÜT, güven, kalite ve sürdürülebilirlik ilkelerini merkeze alarak modern yaşam alanları ve nitelikli yapı projeleri geliştiren bir inşaat ve taahhüt firmasıdır.</p>
-      <p>Projelerimizin her aşamasında planlama, mühendislik, kalite ve şeffaflığı ön planda tutuyor; arsa ve proje geliştirmeden mimari tasarıma, ruhsat süreçlerinden yapım ve teslim aşamasına kadar tüm süreci profesyonel bir anlayışla yönetiyoruz.</p>
-    </section>
-    <section>
-      <h2>Güvenilir Yapılar, Doğru Projeler</h2>
-      <p>Bizim için bir yapı yalnızca beton ve çelikten oluşmaz. Bir yapı; insanların geleceğini, güvenliğini ve yaşam kalitesini doğrudan etkileyen uzun vadeli bir yatırımdır.</p>
-      <p>Bu anlayışla;</p>
-      <ul>
-        <li>Depreme dayanıklı ve güvenli yapılar</li>
-        <li>Modern ve fonksiyonel mimari</li>
-        <li>Kaliteli malzeme ve işçilik</li>
-        <li>Şeffaf proje ve süreç yönetimi</li>
-        <li>Zamanında ve planlı teslim</li>
-        <li>Uzun vadeli değer yaratma</li>
-      </ul>
-      <p>ilkelerini tüm projelerimizin temelinde tutuyoruz.</p>
-    </section>
-    <section>
-      <h2>Kentsel Dönüşümde Güvenilir Çözüm Ortağınız</h2>
-      <p>Özellikle kentsel dönüşüm projelerinde, maliklerin haklarını ve projenin ekonomik sürdürülebilirliğini birlikte değerlendiriyoruz.</p>
-      <p>Riskli yapı tespitinden proje ve ruhsat süreçlerine, finansman ve kamu desteklerinin yönetiminden yıkım, yeniden yapım ve teslim aşamasına kadar süreci bütüncül olarak ele alıyoruz.</p>
-      <p>Amacımız yalnızca eski yapıyı yenilemek değil; daha güvenli, daha modern ve geleceğe değer katan yaşam alanları oluşturmak.</p>
-    </section>
-    <section>
-      <h2>Gücümüz Deneyim, Hedefimiz Gelecek</h2>
-      <p>{company.name} olarak her projeyi kendi içinde özel değerlendiriyor, müşterilerimiz ve iş ortaklarımızla uzun vadeli güven ilişkileri kurmayı hedefliyoruz.</p>
-      <p>Bugünün ihtiyaçlarını karşılayan, yarının değerini koruyan yapılar inşa ediyoruz.</p>
-      <p class="about-signature"><strong>{company.name} İNŞAAT TAAHHÜT</strong><br />Güvenle planlar, kaliteli inşa eder, geleceğe değer katar.</p>
-    </section>
+    {sections.map((section, index) => <section>
+      <h2>{section.heading}</h2>
+      {(section.paragraphs ?? []).map((paragraph) => <p>{paragraph}</p>)}
+      {section.lead && <p>{section.lead}</p>}
+      {!!section.bullets?.length && <ul>{section.bullets.map((bullet) => <li>{bullet}</li>)}</ul>}
+      {section.closing && <p>{section.closing}</p>}
+      {index === sections.length - 1 && <p class="about-signature"><strong>{company.name} {copy.signatureSuffix}</strong><br />{copy.signatureTagline}</p>}
+    </section>)}
   </article>
   <section class="section container about-services">
     <div><p class="eyebrow">{company.sector}</p><h2>{company.slogan}</h2></div>

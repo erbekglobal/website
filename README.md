@@ -19,7 +19,7 @@ Then open `http://localhost:4321/admin/`. The local CMS server writes to this re
 
 ## Edit content
 
-Edit company text and contact details in `src/data/company.json`. Add a project in `/admin/` or create a Markdown file in `src/content/projects/`. Project photos belong in the gallery field and are stored in `public/uploads/`. Add useful alternative text for each image. Do not add photos in the project body. A project with `draft: true` stays out of the public site.
+Edit company text, contact details, and shared menu and button labels in `src/data/company.json`. Edit page headings and copy in the Decap **Sayfalar** section; the About page content is under **Hakkımızda**. Add a project in `/admin/` or create a Markdown file in `src/content/projects/`. Project photos belong in the gallery field and are stored in `public/uploads/`. Add useful alternative text for each image. Do not add photos in the project body. A project with `draft: true` stays out of the public site.
 
 Replace the supplied company text only when the correct details are available. Add project information and photos only after ERBEK GLOBAL INNOVATION provides them.
 

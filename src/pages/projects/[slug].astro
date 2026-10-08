@@ -2,6 +2,8 @@
 import { getCollection, render } from 'astro:content';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import ContactCallout from '../../components/ContactCallout.astro';
+import pages from '../../data/pages.json';
+const copy = pages.projects;
 export async function getStaticPaths() {
   const projects = await getCollection('projects', ({ data }) => !data.draft);
   return projects.map((project) => ({ params: { slug: project.id }, props: { project } }));
@@ -12,12 +14,12 @@ const base = import.meta.env.BASE_URL;
 ---
 <SiteLayout title={project.data.title} description={project.data.summary}>
   <article class="project-detail container">
-    <a class="back-link" href={`${base}projects/`}>← Projelere dön</a>
+    <a class="back-link" href={`${base}projects/`}>← {copy.backLink}</a>
     <p class="eyebrow">{[project.data.location, project.data.year].filter(Boolean).join(' · ')}</p>
     <h1>{project.data.title}</h1>
     <p class="project-summary">{project.data.summary}</p>
     <div class="prose"><Content /></div>
-    {project.data.gallery.length ? <div class="project-gallery">{project.data.gallery.map((item) => <img src={`${base}${item.image.replace(/^\//, '')}`} alt={item.alt} />)}</div> : <div class="image-placeholder detail-placeholder">Bu proje için henüz görsel eklenmedi.</div>}
+    {project.data.gallery.length ? <div class="project-gallery">{project.data.gallery.map((item) => <img src={`${base}${item.image.replace(/^\//, '')}`} alt={item.alt} />)}</div> : <div class="image-placeholder detail-placeholder">{copy.detailImagePlaceholder}</div>}
   </article>
   <ContactCallout />
 </SiteLayout>

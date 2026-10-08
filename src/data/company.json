@@ -4,6 +4,20 @@
   "slogan": "Geleceği İnşa Ediyoruz",
   "intro": "Bina sahipleri ve yatırımcılar için",
   "contactPrompt": "Projenizi birlikte değerlendirelim.",
+  "shared": {
+    "skipLink": "İçeriğe geç",
+    "navigationLabel": "Ana menü",
+    "brandHomeLabel": "ana sayfa",
+    "footerAdminLabel": "Yönetim",
+    "calloutPhoneLabel": "Bizi arayın",
+    "calloutContactLabel": "İletişim bilgileri"
+  },
+  "navigation": {
+    "home": "Ana Sayfa",
+    "projects": "Projeler",
+    "about": "Hakkımızda",
+    "contact": "İletişim"
+  },
   "phoneDisplay": "0 554 600 79 79",
   "phone": "+905546007979",
   "whatsapp": "https://wa.me/905546007979",
@@ -14,7 +28,6 @@
     "Proje Geliştirme",
     "Anahtar Teslim Projeler"
   ],
-  "about": "ERBEK GLOBAL INNOVATION, inşaat taahhüt alanında hizmet verir. Projenizi birlikte değerlendirelim.",
   "email": "",
   "address": "",
   "workArea": ""

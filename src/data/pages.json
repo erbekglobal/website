@@ -1,0 +1,73 @@
+{
+  "home": {
+    "seoTitle": "İnşaat Taahhüt",
+    "contactButton": "İletişime geçin",
+    "servicesHeading": "Hizmet alanlarımız",
+    "servicesIntro": "İhtiyacınızı paylaşın, projenizi birlikte değerlendirelim.",
+    "projectsHeading": "Projelerimizi keşfedin",
+    "projectsLink": "Projeleri görüntüle"
+  },
+  "about": {
+    "seoTitle": "Hakkımızda",
+    "pageHeading": "Hakkımızda",
+    "sections": [
+      {
+        "heading": "Geleceği Güvenle İnşa Ediyoruz",
+        "paragraphs": [
+          "ERBEK GLOBAL INNOVATION İNŞAAT TAAHHÜT, güven, kalite ve sürdürülebilirlik ilkelerini merkeze alarak modern yaşam alanları ve nitelikli yapı projeleri geliştiren bir inşaat ve taahhüt firmasıdır.",
+          "Projelerimizin her aşamasında planlama, mühendislik, kalite ve şeffaflığı ön planda tutuyor; arsa ve proje geliştirmeden mimari tasarıma, ruhsat süreçlerinden yapım ve teslim aşamasına kadar tüm süreci profesyonel bir anlayışla yönetiyoruz."
+        ]
+      },
+      {
+        "heading": "Güvenilir Yapılar, Doğru Projeler",
+        "paragraphs": [
+          "Bizim için bir yapı yalnızca beton ve çelikten oluşmaz. Bir yapı; insanların geleceğini, güvenliğini ve yaşam kalitesini doğrudan etkileyen uzun vadeli bir yatırımdır."
+        ],
+        "lead": "Bu anlayışla;",
+        "bullets": [
+          "Depreme dayanıklı ve güvenli yapılar",
+          "Modern ve fonksiyonel mimari",
+          "Kaliteli malzeme ve işçilik",
+          "Şeffaf proje ve süreç yönetimi",
+          "Zamanında ve planlı teslim",
+          "Uzun vadeli değer yaratma"
+        ],
+        "closing": "ilkelerini tüm projelerimizin temelinde tutuyoruz."
+      },
+      {
+        "heading": "Kentsel Dönüşümde Güvenilir Çözüm Ortağınız",
+        "paragraphs": [
+          "Özellikle kentsel dönüşüm projelerinde, maliklerin haklarını ve projenin ekonomik sürdürülebilirliğini birlikte değerlendiriyoruz.",
+          "Riskli yapı tespitinden proje ve ruhsat süreçlerine, finansman ve kamu desteklerinin yönetiminden yıkım, yeniden yapım ve teslim aşamasına kadar süreci bütüncül olarak ele alıyoruz.",
+          "Amacımız yalnızca eski yapıyı yenilemek değil; daha güvenli, daha modern ve geleceğe değer katan yaşam alanları oluşturmak."
+        ]
+      },
+      {
+        "heading": "Gücümüz Deneyim, Hedefimiz Gelecek",
+        "paragraphs": [
+          "ERBEK GLOBAL INNOVATION olarak her projeyi kendi içinde özel değerlendiriyor, müşterilerimiz ve iş ortaklarımızla uzun vadeli güven ilişkileri kurmayı hedefliyoruz.",
+          "Bugünün ihtiyaçlarını karşılayan, yarının değerini koruyan yapılar inşa ediyoruz."
+        ]
+      }
+    ],
+    "signatureSuffix": "İNŞAAT TAAHHÜT",
+    "signatureTagline": "Güvenle planlar, kaliteli inşa eder, geleceğe değer katar."
+  },
+  "contact": {
+    "seoTitle": "İletişim",
+    "pageHeading": "İletişim",
+    "phoneLabel": "Telefon",
+    "whatsappButton": "WhatsApp ile yazın"
+  },
+  "projects": {
+    "seoTitle": "Projeler",
+    "pageHeading": "Projeler",
+    "intro": "Proje bilgileri ve görseller eklendikçe burada yayınlanır.",
+    "ariaLabel": "Projeler",
+    "imagePlaceholder": "Proje görseli",
+    "emptyHeading": "Henüz yayınlanmış proje yok",
+    "emptyBody": "Yeni proje bilgileri eklendiğinde burada görebilirsiniz.",
+    "backLink": "Projelere dön",
+    "detailImagePlaceholder": "Bu proje için henüz görsel eklenmedi."
+  }
+}

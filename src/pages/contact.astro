@@ -1,12 +1,14 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
 import company from '../data/company.json';
+import pages from '../data/pages.json';
+const copy = pages.contact;
 ---
-<SiteLayout title="İletişim">
-  <section class="page-hero container"><p class="eyebrow">{company.intro}</p><h1>İletişim</h1><p>{company.contactPrompt}</p></section>
+<SiteLayout title={copy.seoTitle}>
+  <section class="page-hero container"><p class="eyebrow">{company.intro}</p><h1>{copy.pageHeading}</h1><p>{company.contactPrompt}</p></section>
   <section class="contact-details container">
-    <div><p class="eyebrow">Telefon</p><h2><a href={`tel:${company.phone}`}>{company.phoneDisplay}</a></h2></div>
-    <a class="button button-gold" href={company.whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp ile yazın <span aria-hidden="true">↗</span></a>
+    <div><p class="eyebrow">{copy.phoneLabel}</p><h2><a href={`tel:${company.phone}`}>{company.phoneDisplay}</a></h2></div>
+    <a class="button button-gold" href={company.whatsapp} target="_blank" rel="noopener noreferrer">{copy.whatsappButton} <span aria-hidden="true">↗</span></a>
     {company.email && <p><a href={`mailto:${company.email}`}>{company.email}</a></p>}
     {company.address && <p>{company.address}</p>}
     {company.workArea && <p>{company.workArea}</p>}

@@ -3,16 +3,18 @@ import { getCollection } from 'astro:content';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import ContactCallout from '../../components/ContactCallout.astro';
 import company from '../../data/company.json';
+import pages from '../../data/pages.json';
 const base = import.meta.env.BASE_URL;
+const copy = pages.projects;
 const projects = (await getCollection('projects', ({ data }) => !data.draft)).sort((a, b) => (b.data.year ?? 0) - (a.data.year ?? 0));
 ---
-<SiteLayout title="Projeler">
-  <section class="page-hero container"><p class="eyebrow">{company.name}</p><h1>Projeler</h1><p>Proje bilgileri ve görseller eklendikçe burada yayınlanır.</p></section>
-  {projects.length ? <section class="project-grid container" aria-label="Projeler">
+<SiteLayout title={copy.seoTitle}>
+  <section class="page-hero container"><p class="eyebrow">{company.name}</p><h1>{copy.pageHeading}</h1><p>{copy.intro}</p></section>
+  {projects.length ? <section class="project-grid container" aria-label={copy.ariaLabel}>
     {projects.map((project) => <a class="project-card" href={`${base}projects/${project.id}/`}>
-      {project.data.gallery[0] ? <img src={`${base}${project.data.gallery[0].image.replace(/^\//, '')}`} alt={project.data.gallery[0].alt} /> : <div class="image-placeholder">Proje görseli</div>}
+      {project.data.gallery[0] ? <img src={`${base}${project.data.gallery[0].image.replace(/^\//, '')}`} alt={project.data.gallery[0].alt} /> : <div class="image-placeholder">{copy.imagePlaceholder}</div>}
       <div><p class="eyebrow">{[project.data.location, project.data.year].filter(Boolean).join(' · ')}</p><h2>{project.data.title}</h2><p>{project.data.summary}</p></div>
     </a>)}
-  </section> : <section class="empty-state container"><span class="empty-mark" aria-hidden="true">EG</span><h2>Henüz yayınlanmış proje yok</h2><p>Yeni proje bilgileri eklendiğinde burada görebilirsiniz.</p></section>}
+  </section> : <section class="empty-state container"><span class="empty-mark" aria-hidden="true">EG</span><h2>{copy.emptyHeading}</h2><p>{copy.emptyBody}</p></section>}
   <ContactCallout />
 </SiteLayout>
