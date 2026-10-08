@@ -27,6 +27,8 @@ Replace the supplied company text only when the correct details are available. A
 
 The workflow in `.github/workflows/deploy.yml` builds the site when a change reaches `main`. In repository settings, set Pages to **GitHub Actions**. The public site content is Turkish.
 
+The admin page uses Decap CMS 3.16.3 from `public/admin/decap-cms.js`; the MIT license is in `public/admin/decap-cms.MIT.txt`, and bundle notices are in `public/admin/decap-cms.js.LICENSE.txt`.
+
 Decap CMS is configured to use the GitHub OAuth service at `https://auth.erbekglobal.com`. Set the GitHub OAuth app callback URL to `https://auth.erbekglobal.com/callback` and set `CMS_ORIGIN` to `https://erbekglobal.com`. Keep the OAuth client credentials on the LXC host only. Users need GitHub write access to this repository to sign in at `/admin/`. CMS saves update `main` and trigger the site deployment. Login requires the auth service and DNS for `auth.erbekglobal.com` to be configured.
 
 In repository settings, configure `erbekglobal.com` as the GitHub Pages custom domain and add the DNS records required by GitHub Pages.
