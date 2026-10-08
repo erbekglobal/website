@@ -2,9 +2,8 @@ backend:
   name: github
   repo: erbekglobal/website
   branch: main
-  base_url: https://YOUR-OAUTH-SERVER
+  base_url: https://auth.erbekglobal.com
   auth_endpoint: auth
-  # Production login requires a GitHub OAuth service.
 local_backend: true
 locale: tr
 media_folder: public/uploads
