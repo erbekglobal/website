@@ -9,9 +9,17 @@ npm install
 npm run dev
 ```
 
+To edit content with Decap CMS locally, start a second terminal and run:
+
+```sh
+BIND_HOST=127.0.0.1 npx decap-server
+```
+
+Then open `http://localhost:4321/admin/`. The local CMS server writes to this repository. Stop it when finished.
+
 ## Edit content
 
-First commit and push the repository-root `.pages.yml` file so Pages CMS can read the configuration. Then open [Pages CMS](https://app.pagescms.org/) and sign in with your GitHub account. Install the Pages CMS GitHub App for **erbekglobal/website** only, then select the `main` branch. Invite your father by email from the Pages CMS repository’s **Collaborators** settings. Edit company text in **Şirket bilgileri**. Edit page headings and copy in **Sayfalar**; About page content is under **Hakkımızda**. Keep optional company values empty when no value is available. Add projects in **Projeler**. Project photos belong in the gallery and are stored in `public/uploads/`. Add useful alternative text for each image. Do not add photos in the project body. A project with `draft: true` stays out of the public site.
+Edit company text, contact details, and shared menu and button labels in `src/data/company.json`. Edit page headings and copy in the Decap **Sayfalar** section; the About page content is under **Hakkımızda**. Add a project in `/admin/` or create a Markdown file in `src/content/projects/`. Project photos belong in the gallery field and are stored in `public/uploads/`. Add useful alternative text for each image. Do not add photos in the project body. A project with `draft: true` stays out of the public site.
 
 Replace the supplied company text only when the correct details are available. Add project information and photos only after ERBEK GLOBAL INNOVATION provides them.
 
@@ -19,6 +27,8 @@ Replace the supplied company text only when the correct details are available. A
 
 The workflow in `.github/workflows/deploy.yml` builds the site when a change reaches `main`. In repository settings, set Pages to **GitHub Actions**. The public site content is Turkish.
 
-The CMS setup is in the repository-root `.pages.yml` file. After the Pages CMS GitHub App is connected, saves update `main` and trigger the existing site deployment. After a successful switch, the former `erbek-cms-auth` LXC service is no longer needed.
+The admin page uses Decap CMS 3.16.3 from `public/admin/decap-cms.js`; the MIT license is in `public/admin/decap-cms.MIT.txt`, and bundle notices are in `public/admin/decap-cms.js.LICENSE.txt`.
+
+Decap CMS is configured to use the GitHub OAuth service at `https://auth.erbekglobal.com`. Set the GitHub OAuth app callback URL to `https://auth.erbekglobal.com/callback` and set `CMS_ORIGIN` to `https://erbekglobal.com`. Keep the OAuth client credentials on the LXC host only. Users need GitHub write access to this repository to sign in at `/admin/`. CMS saves update `main` and trigger the site deployment. Login requires the auth service and DNS for `auth.erbekglobal.com` to be configured.
 
 In repository settings, configure `erbekglobal.com` as the GitHub Pages custom domain and add the DNS records required by GitHub Pages.
