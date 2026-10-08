@@ -30,7 +30,6 @@ collections:
               - { label: İçeriğe geç bağlantısı, name: skipLink, widget: string }
               - { label: Menü erişilebilirlik etiketi, name: navigationLabel, widget: string }
               - { label: Marka ana sayfa etiketi, name: brandHomeLabel, widget: string }
-              - { label: Yönetim bağlantısı, name: footerAdminLabel, widget: string }
               - { label: Telefon çağrısı düğmesi, name: calloutPhoneLabel, widget: string }
               - { label: İletişim çağrısı bağlantısı, name: calloutContactLabel, widget: string }
           - label: Menü bağlantıları
