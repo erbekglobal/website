@@ -4,10 +4,78 @@ import ContactCallout from '../components/ContactCallout.astro';
 import company from '../data/company.json';
 ---
 <SiteLayout title="Hakkımızda">
-  <section class="page-hero container"><p class="eyebrow">Erbek Global</p><h1>Hakkımızda</h1><p>{company.about}</p></section>
+  <section class="page-hero container"><p class="eyebrow">Erbek Global</p><h1>Hakkımızda</h1></section>
+  <article class="section container about-content">
+    <section>
+      <h2>Geleceği Güvenle İnşa Ediyoruz</h2>
+      <p>ERBEK GLOBAL INNOVATION İNŞAAT TAAHHÜT, güven, kalite ve sürdürülebilirlik ilkelerini merkeze alarak modern yaşam alanları ve nitelikli yapı projeleri geliştiren bir inşaat ve taahhüt firmasıdır.</p>
+      <p>Projelerimizin her aşamasında planlama, mühendislik, kalite ve şeffaflığı ön planda tutuyor; arsa ve proje geliştirmeden mimari tasarıma, ruhsat süreçlerinden yapım ve teslim aşamasına kadar tüm süreci profesyonel bir anlayışla yönetiyoruz.</p>
+    </section>
+    <section>
+      <h2>Güvenilir Yapılar, Doğru Projeler</h2>
+      <p>Bizim için bir yapı yalnızca beton ve çelikten oluşmaz. Bir yapı; insanların geleceğini, güvenliğini ve yaşam kalitesini doğrudan etkileyen uzun vadeli bir yatırımdır.</p>
+      <p>Bu anlayışla;</p>
+      <ul>
+        <li>Depreme dayanıklı ve güvenli yapılar</li>
+        <li>Modern ve fonksiyonel mimari</li>
+        <li>Kaliteli malzeme ve işçilik</li>
+        <li>Şeffaf proje ve süreç yönetimi</li>
+        <li>Zamanında ve planlı teslim</li>
+        <li>Uzun vadeli değer yaratma</li>
+      </ul>
+      <p>ilkelerini tüm projelerimizin temelinde tutuyoruz.</p>
+    </section>
+    <section>
+      <h2>Kentsel Dönüşümde Güvenilir Çözüm Ortağınız</h2>
+      <p>Özellikle kentsel dönüşüm projelerinde, maliklerin haklarını ve projenin ekonomik sürdürülebilirliğini birlikte değerlendiriyoruz.</p>
+      <p>Riskli yapı tespitinden proje ve ruhsat süreçlerine, finansman ve kamu desteklerinin yönetiminden yıkım, yeniden yapım ve teslim aşamasına kadar süreci bütüncül olarak ele alıyoruz.</p>
+      <p>Amacımız yalnızca eski yapıyı yenilemek değil; daha güvenli, daha modern ve geleceğe değer katan yaşam alanları oluşturmak.</p>
+    </section>
+    <section>
+      <h2>Gücümüz Deneyim, Hedefimiz Gelecek</h2>
+      <p>ERBEK GLOBAL INNOVATION olarak her projeyi kendi içinde özel değerlendiriyor, müşterilerimiz ve iş ortaklarımızla uzun vadeli güven ilişkileri kurmayı hedefliyoruz.</p>
+      <p>Bugünün ihtiyaçlarını karşılayan, yarının değerini koruyan yapılar inşa ediyoruz.</p>
+      <p class="about-signature"><strong>ERBEK GLOBAL INNOVATION İNŞAAT TAAHHÜT</strong><br />Güvenle planlar, kaliteli inşa eder, geleceğe değer katar.</p>
+    </section>
+  </article>
   <section class="section container about-services">
     <div><p class="eyebrow">{company.sector}</p><h2>{company.slogan}</h2></div>
     <ul class="plain-list">{company.services.map((service) => <li>{service}</li>)}</ul>
   </section>
   <ContactCallout />
 </SiteLayout>
+
+<style>
+  .about-content {
+    max-width: 880px;
+    display: grid;
+    gap: 38px;
+    line-height: 1.75;
+  }
+
+  .about-content h2 {
+    color: var(--navy);
+    font-size: clamp(26px, 3vw, 34px);
+    line-height: 1.2;
+    margin: 0 0 14px;
+  }
+
+  .about-content p {
+    color: var(--muted);
+    margin: 0 0 14px;
+  }
+
+  .about-content ul {
+    margin: 0 0 14px;
+    padding-left: 22px;
+  }
+
+  .about-content li {
+    padding-left: 4px;
+  }
+
+  .about-content .about-signature {
+    margin-top: 26px;
+    color: var(--navy);
+  }
+</style>
