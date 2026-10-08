@@ -1,4 +1,4 @@
-# Erbek Global
+# ERBEK GLOBAL INNOVATION
 
 A Turkish company website built with Astro. The site uses the GitHub Pages address `https://erbekglobal.github.io/website/` and the `/website/` base path.
 
@@ -21,7 +21,7 @@ Then open `http://localhost:4321/website/admin/`. The local CMS server writes to
 
 Edit company text and contact details in `src/data/company.json`. Add a project in `/admin/` or create a Markdown file in `src/content/projects/`. Project photos belong in the gallery field and are stored in `public/uploads/`. Add useful alternative text for each image. Do not add photos in the project body. A project with `draft: true` stays out of the public site.
 
-Replace the supplied company text only when the correct details are available. Add project information and photos only after Erbek Global provides them.
+Replace the supplied company text only when the correct details are available. Add project information and photos only after ERBEK GLOBAL INNOVATION provides them.
 
 ## Publish with GitHub Pages
 

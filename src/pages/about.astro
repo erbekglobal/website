@@ -4,11 +4,11 @@ import ContactCallout from '../components/ContactCallout.astro';
 import company from '../data/company.json';
 ---
 <SiteLayout title="Hakkımızda">
-  <section class="page-hero container"><p class="eyebrow">Erbek Global</p><h1>Hakkımızda</h1></section>
+  <section class="page-hero container"><p class="eyebrow">{company.name}</p><h1>Hakkımızda</h1></section>
   <article class="section container about-content">
     <section>
       <h2>Geleceği Güvenle İnşa Ediyoruz</h2>
-      <p>ERBEK GLOBAL INNOVATION İNŞAAT TAAHHÜT, güven, kalite ve sürdürülebilirlik ilkelerini merkeze alarak modern yaşam alanları ve nitelikli yapı projeleri geliştiren bir inşaat ve taahhüt firmasıdır.</p>
+      <p>{company.name} İNŞAAT TAAHHÜT, güven, kalite ve sürdürülebilirlik ilkelerini merkeze alarak modern yaşam alanları ve nitelikli yapı projeleri geliştiren bir inşaat ve taahhüt firmasıdır.</p>
       <p>Projelerimizin her aşamasında planlama, mühendislik, kalite ve şeffaflığı ön planda tutuyor; arsa ve proje geliştirmeden mimari tasarıma, ruhsat süreçlerinden yapım ve teslim aşamasına kadar tüm süreci profesyonel bir anlayışla yönetiyoruz.</p>
     </section>
     <section>
@@ -33,9 +33,9 @@ import company from '../data/company.json';
     </section>
     <section>
       <h2>Gücümüz Deneyim, Hedefimiz Gelecek</h2>
-      <p>ERBEK GLOBAL INNOVATION olarak her projeyi kendi içinde özel değerlendiriyor, müşterilerimiz ve iş ortaklarımızla uzun vadeli güven ilişkileri kurmayı hedefliyoruz.</p>
+      <p>{company.name} olarak her projeyi kendi içinde özel değerlendiriyor, müşterilerimiz ve iş ortaklarımızla uzun vadeli güven ilişkileri kurmayı hedefliyoruz.</p>
       <p>Bugünün ihtiyaçlarını karşılayan, yarının değerini koruyan yapılar inşa ediyoruz.</p>
-      <p class="about-signature"><strong>ERBEK GLOBAL INNOVATION İNŞAAT TAAHHÜT</strong><br />Güvenle planlar, kaliteli inşa eder, geleceğe değer katar.</p>
+      <p class="about-signature"><strong>{company.name} İNŞAAT TAAHHÜT</strong><br />Güvenle planlar, kaliteli inşa eder, geleceğe değer katar.</p>
     </section>
   </article>
   <section class="section container about-services">
