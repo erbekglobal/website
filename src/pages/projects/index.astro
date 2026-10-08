@@ -1,7 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
 import SiteLayout from '../../layouts/SiteLayout.astro';
-import ContactCallout from '../../components/ContactCallout.astro';
 import company from '../../data/company.json';
 import pages from '../../data/pages.json';
 const base = import.meta.env.BASE_URL;
@@ -16,5 +15,4 @@ const projects = (await getCollection('projects', ({ data }) => !data.draft)).so
       <div><p class="eyebrow">{[project.data.location, project.data.year].filter(Boolean).join(' · ')}</p><h2>{project.data.title}</h2><p>{project.data.summary}</p></div>
     </a>)}
   </section> : <section class="empty-state container"><h2>{copy.emptyHeading}</h2><p>{copy.emptyBody}</p></section>}
-  <ContactCallout />
 </SiteLayout>
