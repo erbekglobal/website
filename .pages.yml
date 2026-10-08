@@ -1,0 +1,316 @@
+media:
+  input: public/uploads
+  output: /uploads
+  extensions: [jpg, jpeg, png, webp, gif]
+  rename: safe
+
+content:
+  - name: company
+    label: Şirket bilgileri
+    type: file
+    path: src/data/company.json
+    format: json
+    fields:
+      - name: name
+        label: Şirket adı
+        type: string
+        required: true
+      - name: sector
+        label: Alan
+        type: string
+        required: true
+      - name: slogan
+        label: Slogan
+        type: string
+        required: true
+      - name: intro
+        label: Giriş metni
+        type: string
+        required: true
+      - name: contactPrompt
+        label: İletişim çağrısı
+        type: string
+        required: true
+      - name: shared
+        label: Ortak metinler
+        type: object
+        required: true
+        fields:
+          - name: skipLink
+            label: İçeriğe geç bağlantısı
+            type: string
+            required: true
+          - name: navigationLabel
+            label: Menü erişilebilirlik etiketi
+            type: string
+            required: true
+          - name: brandHomeLabel
+            label: Marka ana sayfa etiketi
+            type: string
+            required: true
+          - name: calloutPhoneLabel
+            label: Telefon çağrısı düğmesi
+            type: string
+            required: true
+          - name: calloutContactLabel
+            label: İletişim çağrısı bağlantısı
+            type: string
+            required: true
+      - name: navigation
+        label: Menü bağlantıları
+        type: object
+        required: true
+        fields:
+          - name: home
+            label: Ana sayfa
+            type: string
+            required: true
+          - name: projects
+            label: Projeler
+            type: string
+            required: true
+          - name: about
+            label: Hakkımızda
+            type: string
+            required: true
+          - name: contact
+            label: İletişim
+            type: string
+            required: true
+      - name: phoneDisplay
+        label: Görünen telefon
+        type: string
+        required: true
+      - name: phone
+        label: Telefon bağlantısı
+        type: string
+        required: true
+      - name: whatsapp
+        label: WhatsApp bağlantısı
+        type: string
+        required: true
+      - name: website
+        label: Web sitesi
+        type: string
+        required: true
+      - name: email
+        label: E-posta
+        type: string
+        required: false
+      - name: address
+        label: Adres
+        type: text
+        required: false
+      - name: workArea
+        label: Hizmet bölgesi
+        type: string
+        required: false
+      - name: services
+        label: Hizmetler
+        type: string
+        list: true
+        required: true
+
+  - name: pages
+    label: Sayfalar
+    type: file
+    path: src/data/pages.json
+    format: json
+    fields:
+      - name: home
+        label: Ana sayfa
+        type: object
+        required: true
+        fields:
+          - name: seoTitle
+            label: Tarayıcı başlığı
+            type: string
+            required: true
+          - name: contactButton
+            label: İletişim düğmesi
+            type: string
+            required: true
+          - name: servicesHeading
+            label: Hizmetler başlığı
+            type: string
+            required: true
+          - name: servicesIntro
+            label: Hizmetler açıklaması
+            type: text
+            required: true
+          - name: projectsHeading
+            label: Projeler bölümü başlığı
+            type: string
+            required: true
+          - name: projectsLink
+            label: Projeler bağlantısı
+            type: string
+            required: true
+      - name: about
+        label: Hakkımızda
+        type: object
+        required: true
+        fields:
+          - name: seoTitle
+            label: Tarayıcı başlığı
+            type: string
+            required: true
+          - name: pageHeading
+            label: Sayfa başlığı
+            type: string
+            required: true
+          - name: sections
+            label: İçerik bölümleri
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: '{heading}'
+            fields:
+              - name: heading
+                label: Bölüm başlığı
+                type: string
+                required: true
+              - name: paragraphs
+                label: Paragraflar
+                type: text
+                list: true
+                required: true
+              - name: lead
+                label: Liste öncesi metin
+                type: text
+                required: false
+              - name: bullets
+                label: Madde listesi
+                type: string
+                list: true
+                required: false
+              - name: closing
+                label: Liste sonrası metin
+                type: text
+                required: false
+          - name: signatureSuffix
+            label: İmza adından sonraki metin
+            type: string
+            required: true
+          - name: signatureTagline
+            label: İmza sloganı
+            type: string
+            required: true
+      - name: contact
+        label: İletişim
+        type: object
+        required: true
+        fields:
+          - name: seoTitle
+            label: Tarayıcı başlığı
+            type: string
+            required: true
+          - name: pageHeading
+            label: Sayfa başlığı
+            type: string
+            required: true
+          - name: phoneLabel
+            label: Telefon etiketi
+            type: string
+            required: true
+          - name: whatsappButton
+            label: WhatsApp düğmesi
+            type: string
+            required: true
+      - name: projects
+        label: Projeler
+        type: object
+        required: true
+        fields:
+          - name: seoTitle
+            label: Tarayıcı başlığı
+            type: string
+            required: true
+          - name: pageHeading
+            label: Sayfa başlığı
+            type: string
+            required: true
+          - name: intro
+            label: Giriş metni
+            type: text
+            required: true
+          - name: ariaLabel
+            label: Proje listesi erişilebilirlik etiketi
+            type: string
+            required: true
+          - name: imagePlaceholder
+            label: Görsel yer tutucusu
+            type: string
+            required: true
+          - name: emptyHeading
+            label: Boş liste başlığı
+            type: string
+            required: true
+          - name: emptyBody
+            label: Boş liste metni
+            type: text
+            required: true
+          - name: backLink
+            label: Geri bağlantısı
+            type: string
+            required: true
+          - name: detailImagePlaceholder
+            label: Proje sayfası görsel yer tutucusu
+            type: string
+            required: true
+
+  - name: projects
+    label: Projeler
+    type: collection
+    path: src/content/projects
+    format: yaml-frontmatter
+    subfolders: false
+    filename: '{primary}.md'
+    view:
+      primary: title
+    fields:
+      - name: title
+        label: Başlık
+        type: string
+        required: true
+      - name: summary
+        label: Kısa açıklama
+        type: text
+        required: true
+      - name: location
+        label: Konum
+        type: string
+        required: false
+      - name: year
+        label: Yıl
+        type: number
+        required: false
+      - name: draft
+        label: Taslak
+        type: boolean
+        required: false
+      - name: gallery
+        label: Galeri
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{alt}'
+        required: false
+        fields:
+          - name: image
+            label: Görsel
+            type: image
+            required: true
+          - name: alt
+            label: Alternatif metin
+            type: string
+            required: true
+      - name: body
+        label: İçerik
+        type: rich-text
+        required: false
+        options:
+          format: markdown
+          media: false
