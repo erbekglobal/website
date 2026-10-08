@@ -15,6 +15,6 @@ const projects = (await getCollection('projects', ({ data }) => !data.draft)).so
       {project.data.gallery[0] ? <img src={`${base}${project.data.gallery[0].image.replace(/^\//, '')}`} alt={project.data.gallery[0].alt} /> : <div class="image-placeholder">{copy.imagePlaceholder}</div>}
       <div><p class="eyebrow">{[project.data.location, project.data.year].filter(Boolean).join(' · ')}</p><h2>{project.data.title}</h2><p>{project.data.summary}</p></div>
     </a>)}
-  </section> : <section class="empty-state container"><span class="empty-mark" aria-hidden="true">EG</span><h2>{copy.emptyHeading}</h2><p>{copy.emptyBody}</p></section>}
+  </section> : <section class="empty-state container"><h2>{copy.emptyHeading}</h2><p>{copy.emptyBody}</p></section>}
   <ContactCallout />
 </SiteLayout>

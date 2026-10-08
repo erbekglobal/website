@@ -12,25 +12,23 @@ const copy = pages.home;
     <div class="container hero-content">
       <p class="eyebrow">{company.sector}</p>
       <h1>{company.slogan}</h1>
-      <p class="hero-copy">{company.intro}. {company.contactPrompt}</p>
-      <a class="button button-gold" href={`${base}contact/`}>{copy.contactButton} <span aria-hidden="true">→</span></a>
-      <div class="hero-rule" aria-hidden="true"><span></span></div>
+      <p class="hero-copy"><span>{company.intro}</span><span>{company.contactPrompt}</span></p>
+      <a class="button button-gold" href={`${base}contact/`}>{copy.contactButton}</a>
     </div>
-    <div class="hero-mark" aria-hidden="true">EG</div>
   </section>
-  <section class="section container">
+  <section class="section container services-layout">
     <div class="section-heading">
       <p class="eyebrow">{company.name}</p>
       <h2>{copy.servicesHeading}</h2>
       <p>{copy.servicesIntro}</p>
     </div>
     <ul class="service-grid">
-      {services.map((service, i) => <li><span class="service-index">0{i + 1}</span><h3>{service}</h3><span class="service-arrow" aria-hidden="true">↗</span></li>)}
+      {services.map((service, i) => <li><span class="service-index">0{i + 1}</span><h3>{service}</h3></li>)}
     </ul>
   </section>
   <section class="project-invite container">
     <div><p class="eyebrow">{company.name}</p><h2>{copy.projectsHeading}</h2></div>
-    <a class="text-link" href={`${base}projects/`}>{copy.projectsLink} <span aria-hidden="true">→</span></a>
+    <a class="text-link" href={`${base}projects/`}>{copy.projectsLink}</a>
   </section>
   <ContactCallout />
 </SiteLayout>

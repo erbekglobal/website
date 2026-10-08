@@ -3,6 +3,8 @@ import company from '../data/company.json';
 import '../styles/global.css';
 const { title = company.name, description = company.slogan } = Astro.props;
 const base = import.meta.env.BASE_URL;
+const hasInnovation = company.name.endsWith(' INNOVATION');
+const brandName = hasInnovation ? company.name.slice(0, -11) : company.name;
 const currentPath = Astro.url.pathname.replace(base, '/');
 const links = [
   { label: company.navigation.home, href: base },
@@ -17,7 +19,7 @@ const links = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#03182b" />
+    <meta name="theme-color" content="#ffffff" />
     <title>{title} | {company.name}</title>
   </head>
   <body>
@@ -25,7 +27,8 @@ const links = [
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href={base} aria-label={`${company.name} ${company.shared.brandHomeLabel}`}>
-          <span class="brand-name">{company.name}</span>
+          <span class="brand-name">{brandName}</span>
+          {hasInnovation && <span class="brand-innovation">INNOVATION</span>}
           <span class="brand-sector">{company.sector}</span>
         </a>
         <nav aria-label={company.shared.navigationLabel}>
@@ -38,10 +41,10 @@ const links = [
     <footer class="site-footer">
       <div class="container footer-inner">
         <a class="brand" href={base}>
-          <span class="brand-name">{company.name}</span>
+          <span class="brand-name">{brandName}</span>
+          {hasInnovation && <span class="brand-innovation">INNOVATION</span>}
           <span class="brand-sector">{company.sector}</span>
         </a>
-        <p>{company.slogan}</p>
         <a href={`tel:${company.phone}`}>{company.phoneDisplay}</a>
       </div>
     </footer>
