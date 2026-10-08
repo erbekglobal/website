@@ -1,6 +1,6 @@
 # ERBEK GLOBAL INNOVATION
 
-A Turkish company website built with Astro. The site uses the GitHub Pages address `https://erbekglobal.github.io/website/` and the `/website/` base path.
+A Turkish company website built with Astro. The site is configured for `https://erbekglobal.com` on GitHub Pages.
 
 ## Run locally
 
@@ -15,7 +15,7 @@ To edit content with Decap CMS locally, start a second terminal and run:
 BIND_HOST=127.0.0.1 npx decap-server
 ```
 
-Then open `http://localhost:4321/website/admin/`. The local CMS server writes to this repository. Stop it when finished.
+Then open `http://localhost:4321/admin/`. The local CMS server writes to this repository. Stop it when finished.
 
 ## Edit content
 
@@ -29,6 +29,6 @@ The workflow in `.github/workflows/deploy.yml` builds the site when a change rea
 
 Decap CMS local editing works with the local server command above. Production CMS login is not configured. To enable it, provide a trusted GitHub OAuth service, set `backend.base_url` to its HTTPS origin, and set `backend.auth_endpoint` to its authentication path in `public/admin/config.yml`. Configure the OAuth app callback URL to the auth service's callback URL. Do not store OAuth secrets in this repository.
 
-## Optional custom domain
+Configure the OAuth service at `auth.erbekglobal.com`. Set its `CMS_ORIGIN` to `https://erbekglobal.com` and restart the service if it is already running.
 
-When `erbekglobal.com` is connected to GitHub Pages, configure the domain in repository Pages settings, add the required DNS records, and add `public/CNAME` with `erbekglobal.com`. Then change `site` in `astro.config.mjs` to `https://erbekglobal.com`, remove the `base: '/website'` setting, and update Decap's `public_folder` in `public/admin/config.yml` to `/uploads`.
+In repository settings, configure `erbekglobal.com` as the GitHub Pages custom domain and add the DNS records required by GitHub Pages.
