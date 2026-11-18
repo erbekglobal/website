@@ -60,14 +60,14 @@
     "whatsappButton": "WhatsApp ile yazın"
   },
   "projects": {
-    "seoTitle": "Projeler",
-    "pageHeading": "Projeler",
-    "intro": "Proje bilgileri ve görseller eklendikçe burada yayınlanır.",
-    "ariaLabel": "Projeler",
-    "imagePlaceholder": "Proje görseli",
-    "emptyHeading": "Henüz yayınlanmış proje yok",
-    "emptyBody": "Yeni proje bilgileri eklendiğinde burada görebilirsiniz.",
     "backLink": "Projelere dön",
-    "detailImagePlaceholder": "Bu proje için henüz görsel eklenmedi."
+    "detailImagePlaceholder": "Bu proje için henüz görsel eklenmedi.",
+    "ariaLabel": "Projeler",
+    "intro": "ERBEK GLOBAL INNOVATION Projeler Vitrini",
+    "emptyBody": "Yeni proje bilgileri eklendiğinde burada görebilirsiniz.",
+    "pageHeading": "ERBEK GLOBAL INNOVATION Projeler Vitrini",
+    "emptyHeading": "Henüz yayınlanmış proje yok",
+    "imagePlaceholder": "Proje görseli",
+    "seoTitle": "ERBEK GLOBAL INNOVATION Projeler Vitrini"
   }
 }
