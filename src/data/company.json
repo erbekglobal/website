@@ -1,9 +1,5 @@
 {
-  "name": "ERBEK GLOBAL INNOVATION",
-  "sector": "İnşaat Taahhüt",
-  "slogan": "Geleceği İnşa Ediyoruz",
-  "intro": "Bina sahipleri ve yatırımcılar için",
-  "contactPrompt": "Projenizi birlikte değerlendirelim.",
+  "contactPrompt": "Projenizi birlikte değerlendirelim. Kentsel dönüşümden anahtar teslim taahhüt projelerine kadar arsa sahipleri ve yatırımcılar için değer yaratan yapılar inşa ediyoruz.",
   "shared": {
     "skipLink": "İçeriğe geç",
     "navigationLabel": "Ana menü",
@@ -11,6 +7,11 @@
     "calloutPhoneLabel": "Bizi arayın",
     "calloutContactLabel": "İletişim bilgileri"
   },
+  "sector": "İnşaat Taahhüt",
+  "name": "ERBEK GLOBAL INNOVATION",
+  "intro": "Güçlü Mühendislik, Zamanında Teslim ve Şeffaf Süreç ",
+  "phone": "+905546007979",
+  "whatsapp": "https://wa.me/905546007979",
   "navigation": {
     "home": "Ana Sayfa",
     "projects": "Projeler",
@@ -18,16 +19,15 @@
     "contact": "İletişim"
   },
   "phoneDisplay": "0 554 600 79 79",
-  "phone": "+905546007979",
-  "whatsapp": "https://wa.me/905546007979",
+  "address": "",
   "website": "www.erbekglobal.com",
+  "email": "",
   "services": [
     "Kentsel Dönüşüm",
     "İnşaat Taahhüt",
     "Proje Geliştirme",
     "Anahtar Teslim Projeler"
   ],
-  "email": "",
-  "address": "",
+  "slogan": "Geleceği İnşa Ediyoruz",
   "workArea": ""
 }
