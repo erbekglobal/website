@@ -9,6 +9,6 @@ gallery:
     alt: ERBEK GLOBAL INNOVATION
   - image: /uploads/20190621_085437.jpg
     alt: ERBEK GLOBAL INNOVATION
+  - image: public/uploads/ergene-prestige-apt.jpg
+    alt: "ERBEK GLOBAL INNOVATION "
 ---
-
-
