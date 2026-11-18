@@ -1,8 +1,14 @@
 ---
-title: Örnek proje
-summary: Bu sayfa, proje içeriğinin nasıl görüneceğini göstermek için hazırlanmış taslaktır.
+title: Projeler Vitrini
+summary: "ERBEK GLOBAL INNOVATION "
 draft: true
-gallery: []
+gallery:
+  - image: /uploads/erbek-global-innovation_3.jpeg
+    alt: ERBEK GLOBAL INNOVATION
+  - image: /uploads/20190906_174512.jpg
+    alt: ERBEK GLOBAL INNOVATION
+  - image: /uploads/20190621_085437.jpg
+    alt: ERBEK GLOBAL INNOVATION
 ---
 
-Gerçek proje bilgileri eklendiğinde bu taslağı güncelleyebilir veya silebilirsiniz.
+
