@@ -6,8 +6,16 @@ const projects = defineCollection({
   schema: z.object({
     title: z.string(),
     summary: z.string(),
-    location: z.string().optional(),
-    year: z.number().optional(),
+    location: z.string().optional().nullable().transform((val) => val || undefined),
+    year: z
+      .union([z.number(), z.string()])
+      .optional()
+      .nullable()
+      .transform((val) => {
+        if (val === null || val === undefined || val === '') return undefined;
+        const num = Number(val);
+        return isNaN(num) ? undefined : num;
+      }),
     draft: z.boolean().default(false),
     gallery: z.array(z.object({ image: z.string(), alt: z.string() })).default([]),
   }),

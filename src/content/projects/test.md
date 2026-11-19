@@ -1,7 +1,6 @@
 ---
 title: ERBEK GLOBAL INNOVATION
 summary: ERBEK GLOBAL INNOVATION
-year: ""
 draft: false
 gallery:
   - image: /uploads/20190621_085437.jpg
