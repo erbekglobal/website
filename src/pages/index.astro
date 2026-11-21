@@ -605,6 +605,40 @@
                     </div>
                 </article>
 
+                <!-- Proje 5: Esenyurt Prestij Apartmanı -->
+                <article data-category="completed" onclick="openProjectModal(4)" class="project-card group cursor-pointer bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-card hover:shadow-soft transition-all duration-300 flex flex-col">
+                    <div class="relative h-64 overflow-hidden bg-slate-200">
+                        <img src="/uploads/esenyurt-prestij-kolaj.jpg"
+                             alt="Esenyurt Prestij Apartmanı"
+                             onclick="event.stopPropagation(); openLightbox('/uploads/esenyurt-prestij-kolaj.jpg', 'Esenyurt Prestij Apartmanı')"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-zoom-in">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent pointer-events-none"></div>
+                        <span class="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-600 text-white shadow pointer-events-none">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Tamamlandı ve Teslim Edildi
+                        </span>
+                        <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white text-xs font-medium pointer-events-none">
+                            <span><i class="fa-solid fa-location-dot text-brand-amber mr-1.5"></i>İstanbul / Esenyurt</span>
+                            <span class="bg-black/40 backdrop-blur-sm px-2.5 py-1 rounded-md">Kentsel Dönüşüm</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-display text-xl font-bold text-brand-dark group-hover:text-brand-gold transition-colors">
+                                Esenyurt Prestij Apartmanı
+                            </h3>
+                            <p class="text-sm text-slate-600 mt-2 line-clamp-2">
+                                İstanbul Esenyurt'ta kentsel dönüşüm kapsamında hayata geçirilen Prestij Apartmanı; temelden çatıya modern deprem yönetmeliğine uygun, nitelikli malzeme ve titiz işçilikle tamamlanmış ve teslim edilmiştir.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-end">
+                            <span class="inline-flex items-center gap-1 text-xs font-bold text-brand-gold group-hover:translate-x-1 transition-transform">
+                                Detayları İncele <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
             </div>
         </div>
     </section>
@@ -1106,6 +1140,20 @@
                     "A & B Blok — Çift Blok Kentsel Dönüşüm",
                     "TBDY 2018 Deprem Yönetmeliğine Tam Uyum",
                     "Isı & Ses Yalıtımlı Modern Dış Cephe Sistemi",
+                    "Tamamlandı ve Hak Sahiplerine Teslim Edildi"
+                ]
+            },
+            {
+                title: "Esenyurt Prestij Apartmanı",
+                status: "Tamamlandı ve Teslim Edildi",
+                location: "İstanbul / Esenyurt",
+                type: "Kentsel Dönüşüm Projesi",
+                image: "/uploads/esenyurt-prestij-kolaj.jpg",
+                description: "İstanbul Esenyurt'ta kentsel dönüşüm kapsamında hayata geçirilen Prestij Apartmanı; temelden çatıya TBDY 2018 deprem yönetmeliğine tam uyumlu, A sınıfı malzeme seçimi ve titiz şantiye denetimiyle tamamlanmış, tüm bağımsız bölümler hak sahiplerine teslim edilmiştir.",
+                features: [
+                    "TBDY 2018 Deprem Yönetmeliğine Tam Uyum",
+                    "Isı & Ses Yalıtımlı Dış Cephe Sistemi",
+                    "Kaliteli İç Mekan Donatıları & Mutfak",
                     "Tamamlandı ve Hak Sahiplerine Teslim Edildi"
                 ]
             }
