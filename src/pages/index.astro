@@ -552,6 +552,59 @@
                     </div>
                 </article>
 
+                <!-- Proje 4: Bağcılar Prestij Apartmanı A&B Blok -->
+                <article data-category="completed" onclick="openProjectModal(3)" class="project-card group cursor-pointer bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-card hover:shadow-soft transition-all duration-300 flex flex-col">
+                    <div class="relative h-64 overflow-hidden bg-slate-200">
+                        <!-- Mini galeri: 3 resim slider -->
+                        <div class="gallery-slider w-full h-full" id="gallery-3">
+                            <img src="/uploads/bagcilar-prestij-tamamlandi.jpg"
+                                 alt="Bağcılar Prestij Apartmanı - Tamamlandı"
+                                 onclick="event.stopPropagation(); openLightbox(['/uploads/bagcilar-prestij-tamamlandi.jpg','/uploads/bagcilar-prestij-insaat.jpg','/uploads/bagcilar-prestij-temel.jpg'], 0, 'Bağcılar Prestij Apartmanı A&B Blok')"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-zoom-in">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent pointer-events-none"></div>
+                        <!-- Fotoğraf sayısı rozeti -->
+                        <span class="absolute top-4 right-4 inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold bg-black/60 backdrop-blur-sm text-white shadow pointer-events-none">
+                            <i class="fa-solid fa-images text-[10px]"></i> 3 Fotoğraf
+                        </span>
+                        <span class="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-600 text-white shadow pointer-events-none">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Tamamlandı ve Teslim Edildi
+                        </span>
+                        <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white text-xs font-medium pointer-events-none">
+                            <span><i class="fa-solid fa-location-dot text-brand-amber mr-1.5"></i>İstanbul / Bağcılar</span>
+                            <span class="bg-black/40 backdrop-blur-sm px-2.5 py-1 rounded-md">Kentsel Dönüşüm</span>
+                        </div>
+                    </div>
+                    <!-- Küçük thumbnail şeridi -->
+                    <div class="flex gap-2 px-3 pt-3">
+                        <img src="/uploads/bagcilar-prestij-tamamlandi.jpg" alt="Tamamlandı"
+                             onclick="event.stopPropagation(); openLightbox(['/uploads/bagcilar-prestij-tamamlandi.jpg','/uploads/bagcilar-prestij-insaat.jpg','/uploads/bagcilar-prestij-temel.jpg'], 0, 'Bağcılar Prestij Apartmanı A&B Blok')"
+                             class="w-16 h-12 object-cover rounded-lg border-2 border-brand-gold cursor-zoom-in hover:opacity-90 transition-opacity">
+                        <img src="/uploads/bagcilar-prestij-insaat.jpg" alt="İnşaat"
+                             onclick="event.stopPropagation(); openLightbox(['/uploads/bagcilar-prestij-tamamlandi.jpg','/uploads/bagcilar-prestij-insaat.jpg','/uploads/bagcilar-prestij-temel.jpg'], 1, 'Bağcılar Prestij Apartmanı A&B Blok')"
+                             class="w-16 h-12 object-cover rounded-lg border-2 border-transparent hover:border-brand-gold cursor-zoom-in hover:opacity-90 transition-all">
+                        <img src="/uploads/bagcilar-prestij-temel.jpg" alt="Temel"
+                             onclick="event.stopPropagation(); openLightbox(['/uploads/bagcilar-prestij-tamamlandi.jpg','/uploads/bagcilar-prestij-insaat.jpg','/uploads/bagcilar-prestij-temel.jpg'], 2, 'Bağcılar Prestij Apartmanı A&B Blok')"
+                             class="w-16 h-12 object-cover rounded-lg border-2 border-transparent hover:border-brand-gold cursor-zoom-in hover:opacity-90 transition-all">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-display text-xl font-bold text-brand-dark group-hover:text-brand-gold transition-colors">
+                                Bağcılar Prestij Apartmanı A&B Blok
+                            </h3>
+                            <p class="text-sm text-slate-600 mt-2 line-clamp-2">
+                                İstanbul Bağcılar'da kentsel dönüşüm kapsamında A ve B blok olarak inşa edilen Prestij Apartmanı; temelden çatıya modern deprem yönetmeliğine uygun, kaliteli malzeme ve titiz işçilikle tamamlanmış ve teslim edilmiştir.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-end">
+                            <span class="inline-flex items-center gap-1 text-xs font-bold text-brand-gold group-hover:translate-x-1 transition-transform">
+                                Detayları İncele <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
             </div>
         </div>
     </section>
@@ -860,7 +913,7 @@
                         </li>
                         <li class="flex items-center gap-2.5 text-slate-400">
                             <i class="fa-solid fa-location-dot text-brand-amber"></i>
-                            <span>İzmir, Türkiye</span>
+                            <span>İstanbul, Türkiye</span>
                         </li>
                     </ul>
                 </div>
@@ -943,11 +996,25 @@
 
     <!-- LIGHTBOX - Tam Boyut Resim Görüntüleyici -->
     <div id="lightbox" class="hidden fixed inset-0 z-[60] bg-black/92 backdrop-blur-sm flex items-center justify-center p-4" onclick="closeLightbox()">
+        <!-- Kapat -->
         <button type="button" onclick="closeLightbox()" aria-label="Kapat" class="absolute top-4 right-4 w-11 h-11 rounded-full bg-white/10 hover:bg-white/25 text-white flex items-center justify-center transition-colors z-10">
             <i class="fa-solid fa-xmark text-xl"></i>
         </button>
-        <div class="absolute top-4 left-1/2 -translate-x-1/2 text-white/60 text-sm font-medium pointer-events-none" id="lightbox-caption"></div>
-        <img id="lightbox-img" src="" alt="" 
+        <!-- Önceki -->
+        <button type="button" id="lightbox-prev" onclick="event.stopPropagation(); lightboxNav(-1)" aria-label="Önceki" class="hidden absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 hover:bg-white/25 text-white flex items-center justify-center transition-colors z-10">
+            <i class="fa-solid fa-chevron-left text-lg"></i>
+        </button>
+        <!-- Sonraki -->
+        <button type="button" id="lightbox-next" onclick="event.stopPropagation(); lightboxNav(1)" aria-label="Sonraki" class="hidden absolute right-16 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 hover:bg-white/25 text-white flex items-center justify-center transition-colors z-10">
+            <i class="fa-solid fa-chevron-right text-lg"></i>
+        </button>
+        <!-- Başlık + sayaç -->
+        <div class="absolute top-4 left-1/2 -translate-x-1/2 text-white/70 text-sm font-medium pointer-events-none text-center">
+            <div id="lightbox-caption"></div>
+            <div id="lightbox-counter" class="text-white/40 text-xs mt-0.5"></div>
+        </div>
+        <!-- Resim -->
+        <img id="lightbox-img" src="" alt=""
              class="max-w-full max-h-[90vh] object-contain rounded-xl shadow-2xl"
              onclick="event.stopPropagation()">
     </div>
@@ -1027,6 +1094,20 @@
                     "Konforlu ve Fonksiyonel Daire Planları",
                     "Tamamlandı, Teslim Edildi & Hepsi Satıldı"
                 ]
+            },
+            {
+                title: "Bağcılar Prestij Apartmanı A&B Blok",
+                status: "Tamamlandı ve Teslim Edildi",
+                location: "İstanbul / Bağcılar",
+                type: "Kentsel Dönüşüm Projesi",
+                image: "/uploads/bagcilar-prestij-tamamlandi.jpg",
+                description: "İstanbul Bağcılar'da kentsel dönüşüm kapsamında A ve B blok olarak hayata geçirilen Prestij Apartmanı; temelden çatıya TBDY 2018 deprem yönetmeliğine tam uyumlu, A sınıfı malzeme ve yüksek işçilik kalitesiyle tamamlanmış, tüm bağımsız bölümler teslim edilmiştir.",
+                features: [
+                    "A & B Blok — Çift Blok Kentsel Dönüşüm",
+                    "TBDY 2018 Deprem Yönetmeliğine Tam Uyum",
+                    "Isı & Ses Yalıtımlı Modern Dış Cephe Sistemi",
+                    "Tamamlandı ve Hak Sahiplerine Teslim Edildi"
+                ]
             }
         ];
 
@@ -1073,20 +1154,57 @@
                 closeProjectModal();
                 closeLightbox();
             }
+            if (e.key === 'ArrowRight') lightboxNav(1);
+            if (e.key === 'ArrowLeft') lightboxNav(-1);
         });
 
-        // Lightbox fonksiyonları
-        function openLightbox(src, alt) {
-            document.getElementById('lightbox-img').src = src;
-            document.getElementById('lightbox-img').alt = alt || '';
-            document.getElementById('lightbox-caption').textContent = alt || '';
+        // Lightbox fonksiyonları (çoklu resim desteğiyle)
+        let _lbImages = [];
+        let _lbIndex = 0;
+
+        function openLightbox(srcOrArray, indexOrAlt, titleArg) {
+            if (Array.isArray(srcOrArray)) {
+                _lbImages = srcOrArray;
+                _lbIndex = typeof indexOrAlt === 'number' ? indexOrAlt : 0;
+                document.getElementById('lightbox-caption').textContent = titleArg || '';
+            } else {
+                _lbImages = [srcOrArray];
+                _lbIndex = 0;
+                document.getElementById('lightbox-caption').textContent = indexOrAlt || '';
+            }
+            _lbRender();
             document.getElementById('lightbox').classList.remove('hidden');
             document.body.style.overflow = 'hidden';
+        }
+
+        function _lbRender() {
+            const img = document.getElementById('lightbox-img');
+            img.src = _lbImages[_lbIndex];
+            const counter = document.getElementById('lightbox-counter');
+            const prevBtn = document.getElementById('lightbox-prev');
+            const nextBtn = document.getElementById('lightbox-next');
+            if (_lbImages.length > 1) {
+                counter.textContent = (_lbIndex + 1) + ' / ' + _lbImages.length;
+                prevBtn.classList.remove('hidden');
+                nextBtn.classList.remove('hidden');
+                // Önceki/Sonraki butonlarını sağa ötele (kapat butonu ile çakışmasın)
+                nextBtn.style.right = '4.5rem';
+            } else {
+                counter.textContent = '';
+                prevBtn.classList.add('hidden');
+                nextBtn.classList.add('hidden');
+            }
+        }
+
+        function lightboxNav(dir) {
+            _lbIndex = (_lbIndex + dir + _lbImages.length) % _lbImages.length;
+            _lbRender();
         }
 
         function closeLightbox() {
             document.getElementById('lightbox').classList.add('hidden');
             document.getElementById('lightbox-img').src = '';
+            _lbImages = [];
             document.body.style.overflow = '';
         }
 
